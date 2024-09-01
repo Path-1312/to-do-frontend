@@ -18,7 +18,7 @@ const TaskList = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/tasks');
+      const response = await axios.get('https://to-do-backend-orjo.onrender.com/api/tasks');
       const pTasks = response?.data?.filter((e) => !e.completed);
       const cTasks = response?.data?.filter((e) => e.completed);
       setCompletedTasks(cTasks);
@@ -32,7 +32,7 @@ const TaskList = () => {
 
   const fetchTodayTasks = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/tasks/due-today');
+      const response = await axios.get('https://to-do-backend-orjo.onrender.com/api/tasks/due-today');
       setTodayTasks(response.data);
       setShowTodayTasks(true);
     } catch (error) {

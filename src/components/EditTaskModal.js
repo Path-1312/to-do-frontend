@@ -18,7 +18,7 @@ const EditTaskModal = ({ task, onClose, onTaskUpdate }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`http://localhost:5000/api/tasks/${task._id}`, {
+      await axios.patch(`https://to-do-backend-orjo.onrender.com/api/tasks/${task._id}`, {
         name,
         dueDate,
         reminder,

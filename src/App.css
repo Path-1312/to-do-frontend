@@ -1,0 +1,294 @@
+.App {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap'); /* Import Open Sans font */
+
+/* Body styling for gradient background */
+body {
+  font-family: 'Roboto', sans-serif; /* Use Roboto font for body text */
+  background: linear-gradient(
+    135deg,
+    #a2c2e0,
+    #d0f0c0
+  ); /* Gradient background from soft blue to light teal */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slightly transparent white background */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-bottom: 4px solid #0044cc;
+  background: linear-gradient(135deg, #0044cc, #0033aa);
+  border-radius: 8px;
+}
+
+.logo h1 {
+  font-size: 4em;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  color: #ffffff;
+  background: -webkit-linear-gradient(#f79c42, #ff512f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+}
+
+.task-stats {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.stats-item {
+  margin-bottom: 15px;
+}
+
+.stats-label {
+  font-size: 16px;
+  color: #333333;
+  font-weight: bold;
+}
+
+.stats-value {
+  font-size: 20px;
+  color: #0044cc;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 10px;
+}
+
+.task-input {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-input h2 {
+  margin-top: 0;
+  color: #0044cc;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.task-input input[type='text'],
+.task-input input[type='date'] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  width: calc(100% - 22px);
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+}
+
+.task-input .reminder-option {
+  margin-bottom: 15px;
+}
+
+.task-input .reminder-option input[type='checkbox'] {
+  margin-right: 10px;
+}
+
+.task-input .reminder-option label {
+  font-size: 16px;
+  color: #333333;
+}
+
+.task-input button {
+  padding: 10px;
+  border: none;
+  background-color: #0044cc;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.todayDueButton {
+  padding: 10px;
+  border: none;
+  background-color: #060d1d;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  margin: 30px 0px;
+}
+
+.task-input button:hover {
+  background-color: #0033aa;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: row;
+}
+.task-list {
+  padding: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-list h2 {
+  margin-top: 0;
+  color: #0044cc;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.task-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  padding: 15px;
+  border-bottom: 1px solid #dddddd;
+  background-color: #f9f9f9; /* Light background for list items */
+  border-radius: 8px; /* Rounded corners for list items */
+  margin-bottom: 15px; /* Space between list items */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+}
+
+.task-list li:hover {
+  background-color: #e3e3e3; /* Slightly darker background on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+}
+
+.task-list .task-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-list .task-info .task-name {
+  font-size: 22px; /* Larger font size for task names */
+  font-weight: bold;
+  color: #0044cc;
+  font-family: 'Open Sans', sans-serif; /* Use Open Sans font for task names */
+  margin: 0;
+  line-height: 1.4; /* Increase line height for better readability */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add subtle text shadow for depth */
+}
+
+.task-dates {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.task-list .task-info .task-due-date {
+  font-size: 14px; /* Font size for due date */
+  color: #666666;
+  font-family: 'Roboto', sans-serif; /* Use Roboto font for dates */
+  margin-top: 5px; /* Space above the due date */
+}
+
+.task-list button {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px; /* Space above buttons */
+  font-family: 'Roboto', sans-serif;
+  margin: 10px;
+}
+
+.task-list button:hover {
+  background-color: #218838;
+}
+
+.task-list .edit-button {
+  background-color: #ffc107;
+  color: #333333;
+}
+
+.task-list .edit-button:hover {
+  background-color: #e0a800;
+}
+
+.task-list .delete-button {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.task-list .delete-button:hover {
+  background-color: #c82333;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.reminder {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  position: relative;
+  width: 400px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.task-list-flex {
+  flex: 1;
+}
